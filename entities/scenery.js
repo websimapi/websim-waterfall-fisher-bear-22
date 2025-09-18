@@ -88,6 +88,14 @@ export function createScenery() {
     bottomGround.position.set(0, waterfallBottomY, cliffEdgeZ + 7.5); // Start at cliff edge, extend forward
     group.add(bottomGround);
 
+    // Cliff face behind waterfall
+    // Water is at z=2.5, from y=2 to y=-18, width=8. This wall sits behind it.
+    group.add(createVoxel(0, -8, 2.0, 10, 22, 1.2, rockMat)); // Main back wall
+    group.add(createVoxel(3, -5, 2.2, 4, 8, 1, rockMat)); // Ledge/variation
+    group.add(createVoxel(-4, 0, 2.1, 3, 5, 0.8, rockMat));
+    group.add(createVoxel(-2, -15, 2.3, 5, 7, 1, rockMat));
+    group.add(createVoxel(2, 2, 2.0, 6, 3, 1, rockMat)); // top edge
+
     const logGeo = new THREE.CylinderGeometry(0.7, 0.7, 9, 8);
     const log = new THREE.Mesh(logGeo, darkBrownMat);
     log.name = "log";
