@@ -90,11 +90,11 @@ export function createScenery() {
 
     // Cliff face behind waterfall
     // Water is at z=2.5, from y=2 to y=-18. This wall sits behind it (z < 2.5).
-    group.add(createVoxel(0, -10.5, 1.8, 10, 25, 1.2, rockMat)); // Main back wall (moved behind waterfall)
-    group.add(createVoxel(3, -8, 1.6, 4, 8, 1, rockMat)); // Ledge/variation
-    group.add(createVoxel(-4, -4, 1.7, 3, 5, 0.8, rockMat));
-    group.add(createVoxel(-2, -18, 1.5, 5, 7, 1, rockMat));
-    group.add(createVoxel(2, -1.5, 1.8, 6, 3, 1, rockMat)); // top edge
+    group.add(createVoxel(0, -12.5, 1.8, 10, 25, 1.2, rockMat)); // Main back wall (moved behind waterfall and down)
+    group.add(createVoxel(3, -10, 1.6, 4, 8, 1, rockMat)); // Ledge/variation (moved down)
+    group.add(createVoxel(-4, -6, 1.7, 3, 5, 0.8, rockMat)); // (moved down)
+    group.add(createVoxel(-2, -20, 1.5, 5, 7, 1, rockMat)); // (moved down)
+    group.add(createVoxel(2, -3.5, 1.8, 6, 3, 1, rockMat)); // top edge (moved down)
 
     const logGeo = new THREE.CylinderGeometry(0.7, 0.7, 9, 8);
     const log = new THREE.Mesh(logGeo, darkBrownMat);
